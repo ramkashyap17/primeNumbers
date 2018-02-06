@@ -14,11 +14,11 @@ module.exports = {
 	    	result:[]
 	    }
 		 
-		google(Q, function (err, res){
+		google(Q, function (err, response){
 		  if (err) console.error(err)
 		 
-		resultData.result.push(res.links[2]);
-		res.json(resultData)
+			resultData.result.push(response.links[2]);
+			res.json(resultData)
 		  // for (var i = 0; i < res.links.length; ++i) {
 		  //   var link = res.links[i];
 		  //   console.log(link.title + ' - ' + link.href)
