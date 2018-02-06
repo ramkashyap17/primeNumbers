@@ -11,7 +11,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/prime/list/:number', function(req, res, next){
-	primeNumber.list(req, res);
+	primeNumber.list(req, res);	
+})
+
+router.get('/prime/sqrt/:number', function(req, res, next){
+	console.log('Entered here')
+	primeNumber.listWithSqrtAlgorithm(req, res);	
 })
 
 module.exports = router;
