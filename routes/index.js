@@ -14,13 +14,18 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/prime/list/:number', function(req, res, next){
-	primeNumber.list(req, res);	
+	if(req.query.algorithm == 'sqrt'){
+		primeNumber.listWithSqrtAlgorithm(req, res);	
+	}
+	else{
+		primeNumber.list(req, res);	
+	}	
 })
 
-router.get('/prime/sqrt/:number', function(req, res, next){
-	console.log('Entered here')
-	primeNumber.listWithSqrtAlgorithm(req, res);	
-})
+// router.get('/prime/sqrt/:number', function(req, res, next){
+// 	console.log('Entered here')
+// 	primeNumber.listWithSqrtAlgorithm(req, res);	
+// })
 
 router.get('/google/search/:query', function(req, res, next){
 	google.searchString(req, res);	
