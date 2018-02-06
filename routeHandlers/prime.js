@@ -31,7 +31,7 @@ module.exports = {
 	    }	    
 
 	    if(isValid(X) == false){
-	    	resultData.status = "Invalid input value. Please pass a valid number (n): 2 <= X < 13121"
+	    	resultData.status = "Invalid input value. Please pass a valid number (n): 2 <= X < 50,000"
 	    	resultData.code = 0	    	
 	    	res.json(resultData);
 	    }	    
