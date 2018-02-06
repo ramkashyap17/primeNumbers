@@ -3,7 +3,7 @@ function isValid(num){
 	if(
 		(
 			num < 2 ||
-			num > 13121 ||
+			num > 50000 ||
 			Number.isInteger(num) == false ||
 			num == '' ||
 			num == null ||
