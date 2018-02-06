@@ -18,7 +18,7 @@ module.exports = {
 		  if (err) console.error(err)
 		 
 		resultData.result.push(res.links[2]);
-		res.end(resultData)
+		res.json(resultData)
 		  // for (var i = 0; i < res.links.length; ++i) {
 		  //   var link = res.links[i];
 		  //   console.log(link.title + ' - ' + link.href)
