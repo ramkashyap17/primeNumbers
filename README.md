@@ -38,6 +38,21 @@ http://startupsoci.com:1031/prime/list/60?algorithm=sqrt
 	"result": [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59]
 }
 
+
+
+##### example Error Request
+
+http://startupsoci.com:1031/prime/list/50001
+
+##### example Error Reponse
+
+{
+	"status": "Invalid input value. Please pass a valid number (n): 2 <= X < 50,000",
+	"code": 0,
+	"algorithm": "Brute Force",
+	"result": []
+}
+
 ### Google Search
 
 GET http://startupsoci.com:1031/google/search/:query
