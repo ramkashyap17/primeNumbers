@@ -7,20 +7,34 @@ module.exports = {
 		
 		google.resultsPerPage = 10
 		var nextCounter = 0
+
+		var resultData = {
+	    	status: "Success",
+	    	code: 1,	    	
+	    	result:[]
+	    }
 		 
 		google(Q, function (err, res){
 		  if (err) console.error(err)
 		 
-		  for (var i = 0; i < res.links.length; ++i) {
-		    var link = res.links[i];
-		    console.log(link.title + ' - ' + link.href)
-		    console.log(link.description + "\n")
-		  }
+		resultData.result.push(res.links[2]);
+		res.end(resultData)
+		  // for (var i = 0; i < res.links.length; ++i) {
+		  //   var link = res.links[i];
+		  //   console.log(link.title + ' - ' + link.href)
+		  //   console.log(link.description + "\n")
+
+
+
+		    // if(i == 2){
+
+		    // }
+		  // }
 		 
-		  if (nextCounter < 4) {
-		    nextCounter += 1
-		    if (res.next) res.next()
-		  }
+		  // if (nextCounter < 4) {
+		  //   nextCounter += 1
+		  //   if (res.next) res.next()
+		  // }
 		})	    	    
 	}
 }
