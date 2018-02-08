@@ -2,7 +2,7 @@
 Javascript module for listing prime numbers
 
 #### To Install
-npm install
+Clone the repo and run npm install
 
 ## RESTful API documentation
 
@@ -77,3 +77,7 @@ http://startupsoci.com:1031/google/search/elon%20musk
 ### To run the project 
 
 npm start
+
+### To run the unit tests 
+
+npm test
