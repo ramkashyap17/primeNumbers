@@ -10,7 +10,7 @@ var google = require('../routeHandlers/google');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	res.render('index', { title: 'Express' });
 });
 
 router.get('/prime/list/:number', function(req, res, next){

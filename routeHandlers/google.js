@@ -1,5 +1,4 @@
 var google = require('google')
-google.tld = 'in'
 
 module.exports = {	
 	searchString: function(req, res, next){
@@ -17,10 +16,17 @@ module.exports = {
 		 
 		google(Q, function (err, response){
 			
-			if (err) 
-				console.error(err)
-		 
-			resultData.result.push(response.links[2]);
+			if (err){
+				resultData.status = JSON.stringify(err)
+				resultData.code = 0								
+			} 			
+		 	else if(response.links && response.links[2]){
+		 		resultData.result.push(response.links[2]);
+		 	}			
+		 	else{
+		 		resultData.status = "No search results found for this query."
+				resultData.code = 0
+		 	}
 			res.json(resultData)		  
 		})	    	    
 	}
